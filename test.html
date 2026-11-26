@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<style>
+    .tab__panel {
+  max-width: 600px;
+  margin: 2rem auto;
+  font-family: sans-serif;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tab {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
+  background: #eee;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.tab:hover {
+  background: #ddd;
+}
+
+.tab.active {
+  background: #333;
+  color: #fff;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+</style>
+
+  <div class="tab__panel">
+            <div class="tabs">
+              <button class="tab active" data-tab="home">Monday</button>
+              <button class="tab" data-tab="about">Tuesday</button>
+              <button class="tab" data-tab="contact">Wednesday</button>
+              <button class="tab active" data-tab="home">Thursday</button>
+              <button class="tab" data-tab="about">Friday</button>
+              <button class="tab" data-tab="contact">Saturday</button>
+              <button class="tab" data-tab="contact">Sunday</button>
+            </div>
+
+            <div class="tab__content active" id="monday">
+              <h3>Monday</h3>
+              <div class="tab__wrapper">
+                <button class="primary__button">REPLACE WITH TIMES</button>
+                <button class="primary__button">REPLACE WITH TIMES</button>
+                <button class="primary__button">REPLACE WITH TIMES</button>
+                <button class="primary__button">REPLACE WITH TIMES</button>
+                <button class="primary__button">REPLACE WITH TIMES</button>
+              </div>
+            </div>
+            <div class="tab__content active" id="tuesday">
+              <h3>Tuesday</h3>
+              <button class="primary__button">REPLACE WITH TIMES</button>
+            </div>
+            <div class="tab__content active" id="wednesday">
+              <h3>Wednesday</h3>
+              <button class="primary__button">REPLACE WITH TIMES</button>
+            </div>
+            <div class="tab__content active" id="thursday">
+              <h3>Thursday</h3>
+              <button class="primary__button">REPLACE WITH TIMES</button>
+            </div>
+            <div class="tab__content active" id="friday">
+              <h3>Friday</h3>
+              <button class="primary__button">REPLACE WITH TIMES</button>
+            </div>
+            <div class="tab__content active" id="saturday">
+              <h3>Saturday</h3>
+              <button class="primary__button">REPLACE WITH TIMES</button>
+            </div>
+            <div class="tab__content active" id="sunday">
+              <h3>Sunday</h3>
+              <button class="primary__button">REPLACE WITH TIMES</button>
+            </div>
+          </div>
+        </div>
+
+
+
+             <div class="wrapper">
+          <h1 class="primary__color">Main Headline</h1>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quaerat
+            ducimus itaque inventore amet sequi nam veniam repellat in cumque
+            velit vitae repudiandae facere deserunt iure nemo id, ullam nostrum
+            delectus.
+          </p>
+          <div class="btn-group">
+            <a href="#" class="primary__button">215-655-6600</a>
+            <a href="#" class="primary__button">Email@emailaddress.com</a>
+          </div>
+        </div>
+</body>
+</html>
+
+
+      <div class="container">
+          <div class="wrapper__start">
+            <h1 class="primary__color">What Happens Next</h1>
+            <ol>
+              <li>
+                Keep an eye on your phone. A confirmation text with your
+                appointment details will arrive shortly at the number you
+                provided.
+              </li>
+              <li>
+                Please arrive 5 minutes early with clean, product free hair so
+                Dacasta can start your cut right on time.
+              </li>
+              <li>
+                Life happens. If you need to reschedule or cancel, please reach
+                out at least 24 hours before your appointment time so we can
+                open the slot for another client.
+              </li>
+            </ol>
+            <div class="btn-group">
+              <a href="#" class="primary__button">Primary CTA</a>
+              <a href="#" class="primary__button">Secondary CTA</a>
+            </div>
+          </div>
+        </div>

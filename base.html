@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Component Library | Base HTML Skeleton</title>
+    <link rel="stylesheet" href="base-styles.css" />
+  </head>
+  <body>
+    <!-- ========================================================================
+         SVG SPRITE DEFINITIONS (Hidden Reusable Icons)
+         ======================================================================== -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="icon-placeholder" viewBox="0 0 24 24">
+        <path
+          d="M12 2L2 7l10 5 10-5-10-5zm0 7.5L4.5 6 12 2.5 19.5 6 12 9.5zm0 2.5l-10-5v10l10 5 10-5V7l-10 5z"
+        />
+      </symbol>
+    </svg>
+
+    <!-- ========================================================================
+         1. NAVIGATION BAR (Brand Title, Mobile Toggle & Nav Links)
+         ======================================================================== -->
+    <header>
+      <nav class="site__navigation">
+        <div class="nav-wrapper">
+          <a href="index.html" class="logo-title">Brand Name</a>
+          <button
+            class="menu-toggle"
+            aria-label="Toggle Menu"
+            aria-expanded="false"
+          >
+            ☰
+          </button>
+          <ul class="nav-links">
+            <li class="menu-links"><a href="index.html">Home</a></li>
+            <li class="menu-links"><a href="#services">Services</a></li>
+            <li class="menu-links"><a href="#about">About</a></li>
+            <li class="menu-links"><a href="#portfolio">Portfolio</a></li>
+            <li class="menu-links"><a href="#faq">FAQ</a></li>
+            <li class="menu-links">
+              <button
+                class="primary__button"
+                command="show-modal"
+                commandfor="booking-dialog"
+              >
+                Primary CTA
+              </button>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ========================================================================
+         2. HERO BANNER (Full-Bleed Overlay + Responsive Picture)
+         ======================================================================== -->
+    <section id="hero">
+      <div class="hero__container">
+        <h1 class="primary__color">Main Hero Headline</h1>
+        <p>
+          Supporting value proposition statement goes here. Keep it concise,
+          clear, and focused on the core outcome.
+        </p>
+        <div class="btn-group">
+          <button
+            class="primary__button"
+            command="show-modal"
+            commandfor="booking-dialog"
+          >
+            Primary Action
+          </button>
+          <a href="#portfolio" class="secondary__button">Secondary Action</a>
+        </div>
+      </div>
+
+      <picture>
+        <source media="(max-width: 600px)" srcset="/images/hero-mobile.jpg" />
+        <img
+          src="/images/hero-desktop.jpg"
+          width="1900"
+          height="825"
+          fetchpriority="high"
+          loading="eager"
+          decoding="async"
+          alt=""
+        />
+      </picture>
+    </section>
+
+    <main>
+      <!-- ======================================================================
+           3. TWO-COLUMN SPLIT SECTION (Text Block + Feature Image)
+           ====================================================================== -->
+      <section id="about" class="two__column">
+        <div class="container__flexwrap">
+          <div class="standard__block">
+            <div class="wrapper">
+              <h2 class="primary__color">Two-Column Split Heading</h2>
+              <p>
+                First paragraph introducing the brand story, background, or core
+                methodology.
+              </p>
+              <p>
+                Second paragraph expanding on key differentiators and what
+                clients can expect.
+              </p>
+            </div>
+          </div>
+          <div class="img__wrapper">
+            <img
+              src="/images/feature.jpg"
+              alt="Descriptive alt text for the feature image"
+              loading="lazy"
+              class="card__image"
+              width="500"
+              height="350"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           4. WAVE-DIVIDED PANEL + 3-COLUMN ICON/TEXT CARDS
+           ====================================================================== -->
+      <section class="card__section primary__back">
+        <div class="wave-shape-divider" aria-hidden="true">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+              d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+
+        <div class="wrapper white__color">
+          <h2>Wave Section Heading</h2>
+          <p>
+            Supporting section summary displayed above the elevated white
+            panel.
+          </p>
+        </div>
+
+        <div class="panel">
+          <div class="container__flex">
+            <!-- Icon/Text Card 1 -->
+            <article class="text__card">
+              <div class="card__body">
+                <svg
+                  aria-hidden="true"
+                  width="40"
+                  height="40"
+                  fill="currentColor"
+                  class="primary__color"
+                >
+                  <use href="#icon-placeholder" />
+                </svg>
+                <h3 class="card__title">Feature Column One</h3>
+                <p class="card__copy">
+                  Concise summary of the first service pillar, audience tier, or
+                  value proposition.
+                </p>
+                <footer class="card__footer">
+                  <div class="card_actions">
+                    <a href="#" class="card__link">Learn More</a>
+                  </div>
+                </footer>
+              </div>
+            </article>
+
+            <!-- Icon/Text Card 2 -->
+            <article class="text__card">
+              <div class="card__body">
+                <svg
+                  aria-hidden="true"
+                  width="40"
+                  height="40"
+                  fill="currentColor"
+                  class="primary__color"
+                >
+                  <use href="#icon-placeholder" />
+                </svg>
+                <h3 class="card__title">Feature Column Two</h3>
+                <p class="card__copy">
+                  Concise summary of the second service pillar, audience tier,
+                  or value proposition.
+                </p>
+                <footer class="card__footer">
+                  <div class="card_actions">
+                    <a href="#" class="card__link">Learn More</a>
+                  </div>
+                </footer>
+              </div>
+            </article>
+
+            <!-- Icon/Text Card 3 -->
+            <article class="text__card">
+              <div class="card__body">
+                <svg
+                  aria-hidden="true"
+                  width="40"
+                  height="40"
+                  fill="currentColor"
+                  class="primary__color"
+                >
+                  <use href="#icon-placeholder" />
+                </svg>
+                <h3 class="card__title">Feature Column Three</h3>
+                <p class="card__copy">
+                  Concise summary of the third service pillar, audience tier, or
+                  value proposition.
+                </p>
+                <footer class="card__footer">
+                  <div class="card_actions">
+                    <a href="#" class="card__link">Learn More</a>
+                  </div>
+                </footer>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="wave-shape-bottom" aria-hidden="true">
+          <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path
+              d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
+              class="shape-fill"
+            ></path>
+          </svg>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           5. 3-COLUMN SERVICE CARD GRID (Container-Queried)
+           ====================================================================== -->
+      <section id="services">
+        <div class="container-fluid">
+          <div class="wrapper">
+            <h2 class="primary__color">3-Column Service Card Grid</h2>
+            <p>
+              Container-queried grid that automatically collapses to a single
+              column on mobile viewports.
+            </p>
+          </div>
+
+          <div class="service__grid">
+            <div class="service__grid-inner">
+              <article class="service__card">
+                <h3 class="card__title">Service Card One</h3>
+                <p class="card__copy">
+                  Detailed description of the first service offering and client
+                  benefits.
+                </p>
+                <a href="#" class="card__link">Book Service</a>
+              </article>
+
+              <article class="service__card">
+                <h3 class="card__title">Service Card Two</h3>
+                <p class="card__copy">
+                  Detailed description of the second service offering and client
+                  benefits.
+                </p>
+                <a href="#" class="card__link">Book Service</a>
+              </article>
+
+              <article class="service__card">
+                <h3 class="card__title">Service Card Three</h3>
+                <p class="card__copy">
+                  Detailed description of the third service offering and client
+                  benefits.
+                </p>
+                <a href="#" class="card__link">Book Service</a>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           6. OVERLAY IMAGE GALLERY GRID (Auto-Fit Portfolio Cards)
+           ====================================================================== -->
+      <section id="portfolio" class="gallery">
+        <div class="wrapper">
+          <h2 class="primary__color font__large">Overlay Image Gallery</h2>
+          <p>Responsive auto-fit grid with dark gradient overlay captions.</p>
+        </div>
+        <div class="container__grid">
+          <article
+            class="image__card"
+            style="background-image: url('/images/gallery-1.jpg')"
+          >
+            <div class="card__body">
+              <h3 class="card_title">Gallery Item One</h3>
+            </div>
+          </article>
+
+          <article
+            class="image__card"
+            style="background-image: url('/images/gallery-2.jpg')"
+          >
+            <div class="card__body">
+              <h3 class="card_title">Gallery Item Two</h3>
+            </div>
+          </article>
+
+          <article
+            class="image__card"
+            style="background-image: url('/images/gallery-3.jpg')"
+          >
+            <div class="card__body">
+              <h3 class="card_title">Gallery Item Three</h3>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           7. HORIZONTAL MEDIA + TEXT CARD GRID
+           ====================================================================== -->
+      <section>
+        <div class="container-fluid">
+          <div class="wrapper">
+            <h2 class="primary__color">Horizontal Media Card Grid</h2>
+            <p>Side-by-side image and content cards on desktop, stacked on mobile.</p>
+          </div>
+          <div class="card__grid">
+            <article class="card__base">
+              <figure class="card__figure">
+                <img
+                  src="/images/card-1.jpg"
+                  alt="Descriptive alt text for horizontal card one"
+                  loading="lazy"
+                  class="card__image"
+                />
+              </figure>
+              <div class="card__body">
+                <h3 class="card_title">Horizontal Card One</h3>
+                <p class="card__copy">
+                  Supporting copy for a featured highlight, case study, or
+                  promotional package.
+                </p>
+                <footer class="card__footer">
+                  <div class="card_actions">
+                    <a href="#" class="primary__button">View Details</a>
+                  </div>
+                </footer>
+              </div>
+            </article>
+
+            <article class="card__base">
+              <figure class="card__figure">
+                <img
+                  src="/images/card-2.jpg"
+                  alt="Descriptive alt text for horizontal card two"
+                  loading="lazy"
+                  class="card__image"
+                />
+              </figure>
+              <div class="card__body">
+                <h3 class="card_title">Horizontal Card Two</h3>
+                <p class="card__copy">
+                  Supporting copy for a featured highlight, case study, or
+                  promotional package.
+                </p>
+                <footer class="card__footer">
+                  <div class="card_actions">
+                    <a href="#" class="primary__button">View Details</a>
+                  </div>
+                </footer>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           8. NATIVE EXCLUSIVE FAQ ACCORDION (<details name="exclusive">)
+           ====================================================================== -->
+      <section id="faq">
+        <div class="container__flex">
+          <div class="wrapper">
+            <h2 class="primary__color font__large">
+              Frequently Asked Questions
+            </h2>
+            <p>
+              Zero-JavaScript exclusive accordion powered by native HTML5
+              details and summary primitives.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-wrapper panel">
+          <details name="exclusive">
+            <summary>First frequently asked question goes here?</summary>
+            <div class="details-wrapper">
+              <p>
+                Clear, concise answer explaining policies, preparation, or
+                service expectations.
+              </p>
+            </div>
+          </details>
+
+          <details name="exclusive">
+            <summary>Second frequently asked question goes here?</summary>
+            <div class="details-wrapper">
+              <p>
+                Clear, concise answer explaining scheduling, turnaround time, or
+                pricing details.
+              </p>
+            </div>
+          </details>
+
+          <details name="exclusive">
+            <summary>Third frequently asked question goes here?</summary>
+            <div class="details-wrapper">
+              <p>
+                Clear, concise answer explaining cancellation terms or custom
+                requests.
+              </p>
+            </div>
+          </details>
+        </div>
+
+        <!-- ====================================================================
+             9. BOTTOM CTA CALLOUT BOX
+             ==================================================================== -->
+        <div class="container">
+          <div class="cta__box">
+            <h3 class="white__color">Ready to Get Started?</h3>
+            <p>
+              Callout prompt encouraging visitors to book an appointment or
+              request an estimate.
+            </p>
+            <div class="btn-group">
+              <button
+                class="primary__button"
+                command="show-modal"
+                commandfor="booking-dialog"
+              >
+                Open Booking Modal
+              </button>
+              <a href="tel:+15555555555" class="secondary__button">Call Now</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+           10. STANDALONE CONTACT / BOOKING FORM SECTION
+           ====================================================================== -->
+     
+    </main>
+
+    <!-- ========================================================================
+         11. NATIVE DIALOG MODAL (Backdrop Dismiss + Embedded Form)
+         ======================================================================== -->
+    <dialog id="booking-dialog" class="site__dialog">
+      <form method="dialog" class="backdrop-dismiss">
+        <button aria-label="Close modal"></button>
+      </form>
+
+      <div class="dialog__content">
+        <div class="form__container">
+          <div class="form__header">
+            <h3>Request an Appointment</h3>
+            <p>
+              Share your preferred service and availability below.
+            </p>
+          </div>
+
+          <form
+            class="form__wrapper"
+            action="#"
+            method="POST"
+            data-netlify="true"
+          >
+            <label for="modal-name">Full Name</label>
+            <input type="text" id="modal-name" name="name" required />
+
+            <label for="modal-phone">Phone Number</label>
+            <input type="tel" id="modal-phone" name="phone" required />
+
+            <label for="modal-email">Email</label>
+            <input type="email" id="modal-email" name="email" />
+
+            <label for="modal-msg">Details &amp; Preferred Time</label>
+            <textarea id="modal-msg" name="msg" rows="2"></textarea>
+
+            <button class="primary__button" type="submit">Send Request</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- ========================================================================
+         12. SITE FOOTER (Brand Summary, Quick Links, Contact & Copyright)
+         ======================================================================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-wrapper">
+          <div class="footer-brand">
+            <h3 class="footer-title">Brand Name</h3>
+            <p class="footer-text">
+              Short brand summary and local service area description goes here.
+            </p>
+          </div>
+          <div class="footer-nav">
+            <h4 class="footer-heading">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4 class="footer-heading">Contact</h4>
+            <ul class="footer-links">
+              <li><a href="mailto:hello@example.com">hello@example.com</a></li>
+              <li><a href="tel:+15555555555">555-555-5555</a></li>
+              <li>City, State</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 Brand Name. All rights reserved.</p>
+          <p>Custom-Made by Delva Web Design</p>
+        </div>
+      </div>
+    </footer>
+
+    <script defer src="index.js"></script>
+  </body>
+</html>
